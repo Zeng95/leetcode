@@ -1,4 +1,4 @@
-### Approach: Selecting rows based on conditions
+## Approach: Selecting rows based on conditions
 
 #### Algorithm
 
@@ -8,7 +8,7 @@ The keyword `WHERE` is used to filter the rows in the table `Products` based on 
 
 #### Solution
 
-```
+```sql
 SELECT
     product_id
 FROM
