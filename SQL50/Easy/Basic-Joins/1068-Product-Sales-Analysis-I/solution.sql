@@ -1,3 +1,4 @@
+-- Inner Join
 SELECT product_name, year, price
 FROM sales a
 JOIN product b

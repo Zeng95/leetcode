@@ -1,10 +1,10 @@
--- Left Joins
+-- Left Join
 SELECT unique_id, name
 FROM employees
 LEFT JOIN employeeUNI
 ON employees.id = EmployeeUNI.id;
 
--- Right Joins
+-- Right Join
 SELECT unique_id, name
 FROM EmployeeUNI
 RIGHT JOIN Employees
