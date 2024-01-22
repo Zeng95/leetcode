@@ -40,9 +40,10 @@ Return the result table ordered by student_id and subject_name.
 
 The result format is in the following example.
 
-#### Example 1:
+### Example 1:
 
 **Input:**
+
 Students table:
 
 | student_id | student_name |
