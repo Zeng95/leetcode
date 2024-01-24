@@ -35,7 +35,7 @@ The result format is in the following example.
 Employees table::
 
 | id  | name     |
-| --- | -------- |
+| --- | :------- |
 | 1   | Alice    |
 | 7   | Bob      |
 | 11  | Meir     |
@@ -45,7 +45,7 @@ Employees table::
 EmployeeUNI table:
 
 | id  | unique_id |
-| --- | --------- |
+| --- | :-------- |
 | 3   | 1         |
 | 11  | 2         |
 | 90  | 3         |
@@ -53,7 +53,7 @@ EmployeeUNI table:
 **Output:**
 
 | unique_id | name     |
-| --------- | -------- |
+| --------- | :------- |
 | null      | Alice    |
 | null      | Bob      |
 | 2         | Meir     |
