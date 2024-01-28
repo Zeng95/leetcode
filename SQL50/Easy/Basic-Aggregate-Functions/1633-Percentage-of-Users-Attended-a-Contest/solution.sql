@@ -1,4 +1,4 @@
--- PostgreSQL - Solution 1 - Left Join
+-- PostgreSQL: Solution 1 - Left Join
 SELECT contest_id, ROUND(COUNT(user_id)*100.0/num_users, 2) AS percentage
 FROM (
     SELECT COUNT(DISTINCT u.user_id) AS num_users
