@@ -1,7 +1,5 @@
 ## Solution
 
-<hr />
-
 ### Overview
 
 The two keys for solving this question are:
