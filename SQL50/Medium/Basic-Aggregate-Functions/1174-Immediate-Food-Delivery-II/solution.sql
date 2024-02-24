@@ -11,4 +11,4 @@ SELECT
     ) AS immediate_percentage
 FROM first_orders fo
 JOIN delivery d
-    ON d.customer_id = fo.customer_id AND d.order_date = fo.first_order_date;
+ON d.customer_id = fo.customer_id AND d.order_date = fo.first_order_date;
