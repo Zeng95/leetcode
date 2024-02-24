@@ -1,4 +1,4 @@
--- Solution 1 for PostgreSQL
+-- PostgreSQL - Solution 1
 SELECT a.product_id,
     CASE
         WHEN ROUND(SUM(a.price * b.units)/SUM(b.units)::numeric, 2) IS NULL THEN 0
