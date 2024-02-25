@@ -25,3 +25,20 @@ WHERE (a.player_id, a.event_date - interval '1 day') IN (
     FROM activity
     GROUP BY 1
 );
+
+-- PostgreSQL - Solution 3
+WITH first_logins AS (
+    SELECT player_id, MIN(event_date) AS "first_login"
+    FROM activity
+    GROUP BY 1
+), consec_logins AS (
+    SELECT COUNT(a.player_id) AS num_logins
+    FROM first_logins f
+    INNER JOIN activity a
+    ON f.player_id = a.player_id AND f.first_login = a.event_date - INTERVAL '1 DAY'
+)
+SELECT
+    ROUND(
+        (SELECT c.num_logins FROM consec_logins c) * 1.0 / (SELECT COUNT(f.player_id) FROM first_logins f),
+        2
+    ) AS fraction;
