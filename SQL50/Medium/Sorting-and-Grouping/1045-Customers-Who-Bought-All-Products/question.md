@@ -7,8 +7,8 @@ Table: `Customer`
 
 <pre>
 This table may contain duplicate rows.
-<code>customer_id</code> is not NULL.
-product_key is a foreign key (reference column) to <code>Product</code> table.
+customer_id is not NULL.
+product_key is a foreign key (reference column) to Product table.
 </pre>
 
 Table: `Product`
