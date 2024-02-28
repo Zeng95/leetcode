@@ -12,3 +12,9 @@ JOIN (
     FROM product
 ) f
 ON t.per_customer_total_products = f.total_products;
+
+-- PostgreSQL - Solution 2
+SELECT customer_id
+FROM customer
+GROUP BY 1
+HAVING COUNT(DISTINCT product_key) = (SELECT COUNT(*) FROM product);
