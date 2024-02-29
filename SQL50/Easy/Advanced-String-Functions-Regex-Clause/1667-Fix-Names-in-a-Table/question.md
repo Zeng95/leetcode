@@ -1,7 +1,7 @@
 Table: `Users`
 
 | Column Name | Type    |
-| ----------- | :------ |
+| :---------- | :------ |
 | user_id     | int     |
 | name        | varchar |
 
