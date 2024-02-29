@@ -1,3 +1,4 @@
+-- PostgreSQL - Solution 1
 SELECT *
 FROM cinema
 WHERE id % 2 = 1 AND description not like '%boring%'
