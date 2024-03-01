@@ -1,4 +1,4 @@
--- PostgreSQL - Solution 1 - UNION
+-- PostgreSQL - Solution 1 - UNION ALL (allows duplicate values)
 (
     SELECT name AS results
     FROM (
@@ -13,7 +13,7 @@
     ORDER BY total_rates DESC, name
     LIMIT 1
 )
-UNION
+UNION ALL
 (
     SELECT title AS results
     FROM (
