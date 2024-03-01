@@ -37,9 +37,9 @@ WITH cte AS (
         m.title AS movie_title,
         mr.*
     FROM movieRating mr
-    LEFT JOIN users u
+    JOIN users u
     ON mr.user_id = u.user_id
-    LEFT JOIN movies m
+    JOIN movies m
     ON mr.movie_id = m.movie_id
 )
 (
