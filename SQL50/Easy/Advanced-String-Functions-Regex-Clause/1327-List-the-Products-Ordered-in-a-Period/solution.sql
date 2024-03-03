@@ -11,3 +11,13 @@ WITH cte AS (
 SELECT *
 FROM cte
 WHERE unit >= 100;
+
+-- PostgreSQL - Solution 2
+SELECT p.product_name, SUM(unit) AS unit
+FROM orders o
+JOIN products p
+ON o.product_id = p.product_id
+WHERE order_date BETWEEN '2020-02-01' AND '2020-02-29'
+GROUP BY 1
+HAVING SUM(unit) >= 100
+ORDER BY 1 ASC
