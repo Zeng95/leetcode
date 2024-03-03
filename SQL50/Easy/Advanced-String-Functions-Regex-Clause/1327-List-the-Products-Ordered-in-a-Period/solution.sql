@@ -12,9 +12,11 @@ SELECT product_name, unit_feb AS unit
 FROM cte
 WHERE unit_feb >= 100;
 
--- PostgreSQL - Solution 2 - Common Table Expression (CTE)
+-- PostgreSQL - Solution 2 - Common Table Expression (CTE) with Inner Join
 WITH cte AS (
-    SELECT product_id, SUM(unit) AS unit_feb
+    SELECT
+        product_id,
+        SUM(unit) AS unit_feb
     FROM orders
     WHERE order_date BETWEEN '2020-02-01' AND '2020-02-29'
     GROUP BY 1
