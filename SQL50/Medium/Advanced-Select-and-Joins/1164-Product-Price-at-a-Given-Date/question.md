@@ -1,22 +1,17 @@
-Table: `Accounts`
+Table: `Products`
 
 | Column Name | Type |
 | :---------- | :--- |
-| account_id  | int  |
-| income      | int  |
+| product_id  | int  |
+| new_price   | int  |
+| change_date | date |
 
 <pre>
-account_id is the primary key (column with unique values) for this table.
-Each row contains information about the monthly income for one bank account.
+(product_id, change_date) is the primary key (combination of columns with unique values) of this table.
+Each row of this table indicates that the price of some product was changed to a new price at some date.
 </pre>
 
-Write a solution to calculate the number of bank accounts for each salary category. The salary categories are:
-
--   `"Low Salary"`: All the salaries **strictly less** than $20000.
--   `"Average Salary"`: All the salaries in the **inclusive** range [$20000, $50000].
--   `"High Salary"`: All the salaries **strictly greater** than $50000.
-
-The result table **must** contain all three categories. If there are no accounts in a category, return 0.
+Write a solution to find the prices of all products on `2019-08-16`. Assume the price of all products before any change is `10`.
 
 Return the result table in **any order**.
 
@@ -26,27 +21,21 @@ The result format is in the following example.
 
 **Input:**
 
-Accounts table:
+Products table:
 
-| account_id | income |
-| :--------- | :----- |
-| 3          | 108939 |
-| 2          | 12747  |
-| 8          | 87709  |
-| 6          | 91796  |
+| product_id | new_price | change_date |
+| :--------- | :-------- | :---------- |
+| 1          | 20        | 2019-08-14  |
+| 2          | 50        | 2019-08-14  |
+| 1          | 30        | 2019-08-15  |
+| 1          | 35        | 2019-08-16  |
+| 2          | 65        | 2019-08-17  |
+| 3          | 20        | 2019-08-18  |
 
 **Output:**
 
-| category       | accounts_count |
-| :------------- | :------------- |
-| Low Salary     | 1              |
-| Average Salary | 0              |
-| High Salary    | 3              |
-
-**Explanation:**
-
-<pre>
-Low Salary: Account 2.
-Average Salary: No accounts.
-High Salary: Accounts 3, 6, and 8.
-</pre>
+| product_id | price |
+| :--------- | :---- |
+| 2          | 50    |
+| 1          | 35    |
+| 3          | 10    |
