@@ -8,7 +8,7 @@ SELECT
 FROM employees
 ORDER BY 1 ASC;
 
--- PostgreSQL - Solution 1 - Case with NOT LIKE
+-- PostgreSQL - Solution 2 - Case with NOT LIKE
 SELECT
     employee_id,
     CASE
