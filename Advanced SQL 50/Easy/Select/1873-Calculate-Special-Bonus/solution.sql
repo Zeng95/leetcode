@@ -17,3 +17,17 @@ SELECT
     END AS bonus
 FROM employees
 ORDER BY 1 ASC;
+
+-- MySQL - Solution 1 - If Statement with NOT LIKE
+SELECT
+    employee_id,
+    IF(employee_id % 2 = 1 AND name NOT LIKE 'M%', salary, 0) AS bonus
+FROM employees
+ORDER BY 1 ASC;
+
+-- MySQL - Solution 2 - If Statement with REGEXP
+SELECT
+    employee_id,
+    IF(employee_id % 2 = 1 AND name NOT REGEXP '^M', salary, 0) AS bonus
+FROM employees
+ORDER BY 1 ASC;
