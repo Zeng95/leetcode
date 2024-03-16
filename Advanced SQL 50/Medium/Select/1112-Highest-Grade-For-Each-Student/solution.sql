@@ -14,4 +14,4 @@ cte2 AS (
 )
 SELECT student_id, course_id, grade
 FROM cte2
-WHERE course_id = smallest_course_id
+WHERE course_id = smallest_course_id;
