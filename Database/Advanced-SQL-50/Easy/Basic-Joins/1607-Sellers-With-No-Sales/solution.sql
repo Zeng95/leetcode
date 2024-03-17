@@ -2,7 +2,7 @@
 SELECT seller_name
 FROM seller
 WHERE seller_id NOT IN (
-    SELECT seller_id
+    SELECT DISTINCT seller_id
     FROM orders
     WHERE EXTRACT(YEAR FROM sale_date) = 2020
 )
@@ -12,7 +12,7 @@ ORDER BY 1 ASC;
 SELECT seller_name
 FROM seller
 WHERE seller_id NOT IN (
-    SELECT seller_id
+    SELECT DISTINCT seller_id
     FROM orders
     WHERE sale_date between '2020-01-01' AND '2020-12-31'
 )
