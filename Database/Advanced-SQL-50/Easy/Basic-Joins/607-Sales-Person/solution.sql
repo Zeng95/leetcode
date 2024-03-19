@@ -1,4 +1,4 @@
--- PostgreSQL - Solution 1 - Joining Tables and Using Exclusion with "NOT IN"
+-- Solution 1 - Joining Tables and Using Exclusion with "NOT IN"
 SELECT name
 FROM salesperson
 WHERE sales_id NOT IN (
@@ -7,7 +7,7 @@ WHERE sales_id NOT IN (
     WHERE o.com_id = c.com_id AND c.name = 'RED'
 );
 
--- PostgreSQL - Solution 2 - Joining Tables(Inner Join) and Using Exclusion with "NOT IN"
+-- Solution 2 - Joining Tables(Inner Join) and Using Exclusion with "NOT IN"
 SELECT name
 FROM salesperson
 WHERE sales_id NOT IN (
@@ -18,7 +18,7 @@ WHERE sales_id NOT IN (
     WHERE c.name = 'RED'
 );
 
--- PostgreSQL - Solution 3 - Subquery and Using Exclusion with "NOT IN"
+-- Solution 3 - Subquery and Using Exclusion with "NOT IN"
 SELECT name
 FROM salesperson
 WHERE sales_id NOT IN (

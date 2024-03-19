@@ -1,4 +1,4 @@
--- olution 1
+-- Solution 1
 SELECT firstname, lastname, city, state
 FROM person p
 LEFT JOIN address a

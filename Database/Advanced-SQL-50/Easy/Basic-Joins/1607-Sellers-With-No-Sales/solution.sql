@@ -1,4 +1,4 @@
--- PostgreSQL - Solution 1 - Subquery with the EXTRACT() function
+-- Solution 1 - Subquery with the EXTRACT() function
 SELECT seller_name
 FROM seller
 WHERE seller_id NOT IN (
@@ -8,7 +8,7 @@ WHERE seller_id NOT IN (
 )
 ORDER BY 1 ASC;
 
--- PostgreSQL - Solution 2 - Subquery with the BETWEEN Operator
+-- Solution 2 - Subquery with the BETWEEN Operator
 SELECT seller_name
 FROM seller
 WHERE seller_id NOT IN (
@@ -18,7 +18,7 @@ WHERE seller_id NOT IN (
 )
 ORDER BY 1 ASC;
 
--- MySQL - Solution 1
+-- Solution 3
 SELECT seller_name
 FROM seller
 WHERE seller_id NOT IN (

@@ -1,3 +1,4 @@
+-- Solution 1
 WITH cte AS (
     SELECT u.id, u.name,
         CASE
