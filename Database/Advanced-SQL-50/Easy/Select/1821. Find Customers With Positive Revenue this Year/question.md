@@ -8,11 +8,11 @@ Table: `Customers`
 | year        | int  |
 | revenue     | int  |
 
-<pre>
+```text
 (customer_id, year) is the primary key (combination of columns with unique values) for this table.
 This table contains the customer ID and the revenue of customers in different years.
 Note that this revenue can be negative.
-</pre>
+```
 
 Write a solution to report the customers with **postive revenue** in the year 2021.
 
@@ -20,7 +20,7 @@ Return the result table in **any order**.
 
 The result format is in the following example.
 
-### Example 1
+## Example 1
 
 **Input:**
 
@@ -45,10 +45,10 @@ Customers table:
 
 **Explanation:**
 
-<pre>
+```text
 Customer 1 has revenue equal to 30 in the year 2021.
 Customer 2 has revenue equal to -50 in the year 2021.
 Customer 3 has no revenue in the year 2021.
 Customer 4 has revenue equal to 20 in the year 2021.
 Thus only customers 1 and 4 have positive revenue in the year 2021.
-</pre>
+```
