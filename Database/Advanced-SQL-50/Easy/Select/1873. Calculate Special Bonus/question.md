@@ -1,3 +1,5 @@
+# 1873. Calculate Special Bonus
+
 Table: `Employees`
 
 | Column Name | Type    |
@@ -17,7 +19,7 @@ Return the result table ordered by `employee_id`.
 
 The result format is in the following example.
 
-### Example 1:
+### Example 1
 
 **Input:**
 
