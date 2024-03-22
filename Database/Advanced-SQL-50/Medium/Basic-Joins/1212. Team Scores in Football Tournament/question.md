@@ -1,3 +1,5 @@
+# 1212. Team Scores in Football Tournament
+
 Table: `Teams`
 
 | Column Name | Type    |
@@ -5,10 +7,10 @@ Table: `Teams`
 | team_id     | int     |
 | team_name   | varchar |
 
-<pre>
+```text
 team_id is the column with unique values of this table.
 Each row of this table represents a single football team.
-</pre>
+```
 
 Table: `Matches`
 
@@ -20,11 +22,11 @@ Table: `Matches`
 | host_goals  | int  |
 | guest_goals | int  |
 
-<pre>
+```text
 match_id is the column of unique values of this table.
 Each row is a record of a finished match between two different teams.
 Teams host_team and guest_team are represented by their IDs in the Teams table (team_id), and they scored host_goals and guest_goals goals, respectively.
-</pre>
+```
 
 You would like to compute the scores of all teams after all matches. Points are awarded as follows:
 
@@ -38,7 +40,7 @@ Return the result table ordered by `num_points` **in decreasing order**. In case
 
 The result format is in the following example.
 
-### Example 1:
+## Example 1
 
 **Input:**
 

@@ -1,3 +1,5 @@
+# 1440. Evaluate Boolean Expression
+
 Table: `Variables`
 
 | Column Name | Type    |
@@ -5,10 +7,10 @@ Table: `Variables`
 | name        | varchar |
 | value       | int     |
 
-<pre>
+```text
 In SQL, name is the primary key for this table.
 This table contains the stored variables and their values.
-</pre>
+```
 
 Table: `Expressions`
 
@@ -18,12 +20,12 @@ Table: `Expressions`
 | operator      | enum    |
 | right_operand | varchar |
 
-<pre>
+```text
 In SQL, (left_operand, operator, right_operand) is the primary key for this table.
 This table contains a boolean expression that should be evaluated.
 operator is an enum that takes one of the values ('<', '>', '=')
 The values of left_operand and right_operand are guaranteed to be in the Variables table.
-</pre>
+```
 
 Evaluate the boolean expressions in `Expressions` table.
 
@@ -31,7 +33,7 @@ Return the result table in **any order**.
 
 The result format is in the following example.
 
-### Example 1:
+## Example 1
 
 **Input:**
 
@@ -66,6 +68,6 @@ Expressions table:
 
 **Explanation:**
 
-<pre>
+```text
 As shown, you need to find the value of each boolean expression in the table using the variables table.
-</pre>
+```
