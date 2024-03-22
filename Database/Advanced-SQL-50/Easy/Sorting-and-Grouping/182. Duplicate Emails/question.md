@@ -1,55 +1,43 @@
-# 1445. Apples & Oranges
+# 182. Duplicate Emails
 
-Table: `Sales`
+Table: `Person`
 
-| Column Name | Type |
-| :---------- | :--- |
-| sale_date   | date |
-| fruit       | enum |
-| sold_num    | int  |
+| Column Name | Type    |
+| :---------- | :------ |
+| id          | int     |
+| email       | varchar |
 
-<pre>
-(sale_date, fruit) is the primary key (combination of columns with unique values) of this table.
-This table contains the sales of "apples" and "oranges" sold each day.
-</pre>
+```text
+id is the primary key (column with unique values) for this table.
+Each row of this table contains an email. The emails will not contain uppercase letters.
+```
 
-Write a solution to report the difference between the number of **apples** and **oranges** sold each day.
+Write a solution to report all the duplicate emails. Note that it's guaranteed that the email field is not NULL.
 
-Return the result table **ordered** by `sale_date`.
+Return the result table in **any order**.
 
 The result format is in the following example.
 
-### Example 1
+## Example 1
 
 **Input:**
 
-Sales table:
+Person table:
 
-| sale_date  | fruit   | sold_num |
-| :--------- | :------ | :------- |
-| 2020-05-01 | apples  | 10       |
-| 2020-05-01 | oranges | 8        |
-| 2020-05-02 | apples  | 15       |
-| 2020-05-02 | oranges | 15       |
-| 2020-05-03 | apples  | 20       |
-| 2020-05-03 | oranges | 0        |
-| 2020-05-04 | apples  | 15       |
-| 2020-05-04 | oranges | 16       |
+| id   | email     |
+| :--- | :-------- |
+| 1    | <a@b.com> |
+| 2    | <c@d.com> |
+| 3    | <a@b.com> |
 
 **Output:**
 
-| sale_date  | diff |
-| :--------- | :--- |
-| 2020-05-01 | 2    |
-| 2020-05-02 | 0    |
-| 2020-05-03 | 20   |
-| 2020-05-04 | -1   |
+| Email     |
+| :-------- |
+| <a@b.com> |
 
 **Explanation:**
 
-<pre>
-Day 2020-05-01, 10 apples and 8 oranges were sold (Difference  10 - 8 = 2).
-Day 2020-05-02, 15 apples and 15 oranges were sold (Difference 15 - 15 = 0).
-Day 2020-05-03, 20 apples and 0 oranges were sold (Difference 20 - 0 = 20).
-Day 2020-05-04, 15 apples and 16 oranges were sold (Difference 15 - 16 = -1).
-</pre>
+```text
+a@b.com is repeated two times.
+```
