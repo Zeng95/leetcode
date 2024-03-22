@@ -1,3 +1,5 @@
+# 1890. The Latest Login in 2020
+
 Table: `Logins`
 
 | Column Name | Type     |
@@ -5,10 +7,10 @@ Table: `Logins`
 | user_id     | int      |
 | time_stamp  | datetime |
 
-<pre>
+```text
 (user_id, time_stamp) is the primary key (combination of columns with unique values) for this table.
 Each row contains information about the login time for the user with ID user_id.
-</pre>
+```
 
 Write a solution to report the **latest** login for all users in the year `2020`. Do **not** include the users who did not login in `2020`.
 
@@ -16,7 +18,7 @@ Return the result table **in any order**.
 
 The result format is in the following example.
 
-### Example 1:
+## Example 1
 
 **Input:**
 
@@ -44,9 +46,9 @@ Logins table:
 
 **Explanation:**
 
-<pre>
+```text
 User 6 logged into their account 3 times but only once in 2020, so we include this login in the result table.
 User 8 logged into their account 2 times in 2020, once in February and once in December. We include only the latest one (December) in the result table.
 User 2 logged into their account 2 times but only once in 2020, so we include this login in the result table.
 User 14 did not login in 2020, so we do not include them in the result table.
-</pre>
+```

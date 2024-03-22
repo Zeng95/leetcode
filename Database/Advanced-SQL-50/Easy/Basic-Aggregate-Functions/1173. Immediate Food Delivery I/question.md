@@ -1,3 +1,5 @@
+# 1173. Immediate Food Delivery I
+
 Table: `Delivery`
 
 | Column Name                 | Type |
@@ -7,10 +9,10 @@ Table: `Delivery`
 | order_date                  | date |
 | customer_pref_delivery_date | date |
 
-<pre>
+```text
 delivery_id is the primary key (column with unique values) of this table.
 The table holds information about food delivery to customers that make orders at some date and specify a preferred delivery date (on the same order date or after it).
-</pre>
+```
 
 If the customer's preferred delivery date is the same as the order date, then the order is called **immediate;** otherwise, it is called **scheduled.**
 
@@ -18,7 +20,7 @@ Write a solution to find the percentage of immediate orders in the table, **roun
 
 The result format is in the following example.
 
-### Example 1:
+## Example 1
 
 **Input:**
 
@@ -41,6 +43,6 @@ Delivery table:
 
 **Explanation:**
 
-<pre>
+```text
 The orders with delivery id 2 and 3 are immediate while the others are scheduled.
-</pre>
+```

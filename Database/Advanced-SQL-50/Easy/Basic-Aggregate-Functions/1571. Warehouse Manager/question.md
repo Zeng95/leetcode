@@ -1,3 +1,5 @@
+# 1571. Warehouse Manager
+
 Table: `Warehouse`
 
 | Column Name | Type    |
@@ -6,10 +8,10 @@ Table: `Warehouse`
 | product_id  | int     |
 | units       | int     |
 
-<pre>
+```text
 (name, product_id) is the primary key (combination of columns with unique values) for this table.
 Each row of this table contains the information of the products in each warehouse.
-</pre>
+```
 
 Table: `Products`
 
@@ -21,10 +23,10 @@ Table: `Products`
 | Length       | int     |
 | Height       | int     |
 
-<pre>
+```text
 product_id is the primary key (column with unique values) for this table.
 Each row of this table contains information about the product dimensions (Width, Lenght, and Height) in feets of each product.
-</pre>
+```
 
 Write a solution to report the number of cubic feet of **volume** the inventory occupies in each warehouse.
 
@@ -32,7 +34,7 @@ Return the result table in **any order**.
 
 The query result format is in the following example.
 
-### Example 1:
+## Example 1
 
 **Input:**
 
@@ -66,7 +68,7 @@ Products table:
 
 **Explanation:**
 
-<pre>
+```text
 Volume of product_id = 1 (LC-TV), 5x50x40 = 10000
 Volume of product_id = 2 (LC-KeyChain), 5x5x5 = 125
 Volume of product_id = 3 (LC-Phone), 2x10x10 = 200
@@ -77,4 +79,4 @@ LCHouse2: 2 units of LC-TV + 2 units of LC-KeyChain.
           Total volume: 2*10000 + 2*125 = 20250 cubic feet
 LCHouse3: 1 unit of LC-T-Shirt.
           Total volume: 1*800 = 800 cubic feet.
-</pre>
+```
