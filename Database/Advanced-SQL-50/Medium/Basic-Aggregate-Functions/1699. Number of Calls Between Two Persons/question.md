@@ -1,3 +1,5 @@
+# 1699. Number of Calls Between Two Persons
+
 Table: `Calls`
 
 | Column Name | Type |
@@ -18,7 +20,7 @@ Return the result table in **any order**.
 
 The result format is in the following example.
 
-### Example 1:
+### Example 1
 
 **Input:**
 

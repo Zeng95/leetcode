@@ -1,3 +1,5 @@
+# 1445. Apples & Oranges
+
 Table: `Sales`
 
 | Column Name | Type |
@@ -17,7 +19,7 @@ Return the result table **ordered** by `sale_date`.
 
 The result format is in the following example.
 
-### Example 1:
+### Example 1
 
 **Input:**
 
