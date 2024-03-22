@@ -1,3 +1,5 @@
+# 607. Sales Person
+
 Table: `SalesPerson`
 
 | Column Name     | Type    |
@@ -8,10 +10,10 @@ Table: `SalesPerson`
 | commission_rate | int     |
 | hire_date       | date    |
 
-<pre>
+```text
 sales_id is the primary key (column with unique values) for this table.
 Each row of this table indicates the name and the ID of a salesperson alongside their salary, commission rate, and hire date.
-</pre>
+```
 
 Table: `Company`
 
@@ -21,10 +23,10 @@ Table: `Company`
 | name        | varchar |
 | city        | varchar |
 
-<pre>
+```text
 com_id is the primary key (column with unique values) for this table.
 Each row of this table indicates the name and the ID of a company and the city in which the company is located.
-</pre>
+```
 
 Table: `Company`
 
@@ -34,12 +36,12 @@ Table: `Company`
 | name        | varchar |
 | city        | varchar |
 
-<pre>
+```text
 order_id is the primary key (column with unique values) for this table.
 com_id is a foreign key (reference column) to com_id from the Company table.
 sales_id is a foreign key (reference column) to sales_id from the SalesPerson table.
 Each row of this table contains information about one order. This includes the ID of the company, the ID of the salesperson, the date of the order, and the amount paid.
-</pre>
+```
 
 Write a solution to find the names of all the salespersons who did not have any orders related to the company with the name **"RED"**.
 
@@ -47,7 +49,7 @@ Return the result table in **any order**.
 
 The result format is in the following example.
 
-### Example 1:
+## Example 1
 
 **Input:**
 
@@ -89,6 +91,6 @@ Orders table:
 
 **Explanation:**
 
-<pre>
+```text
 According to orders 3 and 4 in the Orders table, it is easy to tell that only salesperson John and Pam have sales to company RED, so we report all the other names in the table salesperson.
-</pre>
+```

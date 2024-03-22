@@ -1,3 +1,5 @@
+# 1607. Sellers With No Sales
+
 Table: `Customer`
 
 | Column Name   | Type    |
@@ -5,10 +7,10 @@ Table: `Customer`
 | customer_id   | int     |
 | customer_name | varchar |
 
-<pre>
+```text
 customer_id is the column with unique values for this table.
 Each row of this table contains the information of each customer in the WebStore.
-</pre>
+```
 
 Table: `Orders`
 
@@ -20,11 +22,11 @@ Table: `Orders`
 | customer_id | int  |
 | seller_id   | int  |
 
-<pre>
+```text
 order_id is the column with unique values for this table.
 Each row of this table contains all orders made in the webstore.
 sale_date is the date when the transaction was made between the customer (customer_id) and the seller (seller_id).
-</pre>
+```
 
 Table: `Seller`
 
@@ -33,10 +35,10 @@ Table: `Seller`
 | seller_id   | int     |
 | seller_name | varchar |
 
-<pre>
+```text
 seller_id is the column with unique values for this table.
 Each row of this table contains the information of each seller.
-</pre>
+```
 
 Write a solution to report the names of all sellers who did not make any sales in `2020`.
 
@@ -44,7 +46,7 @@ Return the result table ordered by `seller_name` in **ascending order**.
 
 The result format is in the following example.
 
-### Example 1:
+## Example 1
 
 **Input:**
 
@@ -82,8 +84,8 @@ Seller table:
 
 **Explanation:**
 
-<pre>
+```text
 Daniel made 1 sale in March 2020.
 Elizabeth made 2 sales in 2020 and 1 sale in 2019.
 Frank made 1 sale in 2019 but no sales in 2020.
-</pre>
+```
