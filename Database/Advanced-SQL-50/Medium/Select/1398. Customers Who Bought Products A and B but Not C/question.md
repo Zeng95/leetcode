@@ -1,3 +1,5 @@
+# 1398. Customers Who Bought Products A and B but Not C
+
 Table: `Customers`
 
 | Column Name   | Type    |
@@ -29,7 +31,7 @@ Return the result table **ordered** by `customer_id`.
 
 The result format is in the following example.
 
-### Example 1:
+### Example 1
 
 **Input:**
 

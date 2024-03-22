@@ -1,3 +1,5 @@
+# 1112. Highest Grade For Each Student
+
 Table: `Enrollments`
 
 | Column Name | Type |
@@ -17,7 +19,7 @@ Return the result table ordered by `student_id` in **ascending order**.
 
 The result format is in the following example.
 
-### Example 1:
+### Example 1
 
 **Input:**
 
