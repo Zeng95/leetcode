@@ -1,3 +1,4 @@
+-- Solution 1
 SELECT
     date_id,
     make_name,
