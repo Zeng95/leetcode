@@ -7,10 +7,10 @@ Table: `Customers`
 | customer_id   | int     |
 | customer_name | varchar |
 
-<pre>
+```text
 customer_id is the column with unique values for this table.
 customer_name is the name of the customer.
-</pre>
+```
 
 Table: `Orders`
 
@@ -20,10 +20,10 @@ Table: `Orders`
 | customer_id  | int     |
 | product_name | varchar |
 
-<pre>
+```text
 order_id is the column with unique values for this table.
 customer_id is the id of the customer who bought the product "product_name".
-</pre>
+```
 
 Write a solution to report the customer_id and customer_name of customers who bought products **"A"**, **"B"** but did not buy the product **"C"** since we want to recommend them to purchase this product.
 
@@ -31,7 +31,7 @@ Return the result table **ordered** by `customer_id`.
 
 The result format is in the following example.
 
-### Example 1
+## Example 1
 
 **Input:**
 
@@ -66,6 +66,6 @@ Orders table:
 
 **Explanation:**
 
-<pre>
+```text
 Only the customer_id with id 3 bought the product A and B but not the product C.
-</pre>
+```

@@ -8,10 +8,10 @@ Table: `Sales`
 | fruit       | enum |
 | sold_num    | int  |
 
-<pre>
+```text
 (sale_date, fruit) is the primary key (combination of columns with unique values) of this table.
 This table contains the sales of "apples" and "oranges" sold each day.
-</pre>
+```
 
 Write a solution to report the difference between the number of **apples** and **oranges** sold each day.
 
@@ -19,7 +19,7 @@ Return the result table **ordered** by `sale_date`.
 
 The result format is in the following example.
 
-### Example 1
+## Example 1
 
 **Input:**
 

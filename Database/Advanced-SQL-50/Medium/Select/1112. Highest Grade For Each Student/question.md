@@ -8,10 +8,10 @@ Table: `Enrollments`
 | course_id   | int  |
 | grade       | int  |
 
-<pre>
+```text
 (student_id, course_id) is the primary key (combination of columns with unique values) of this table.
 grade is never NULL.
-</pre>
+```
 
 Write a solution to find the highest grade with its corresponding course for each student. In case of a tie, you should find the course with the smallest `course_id`.
 
@@ -19,7 +19,7 @@ Return the result table ordered by `student_id` in **ascending order**.
 
 The result format is in the following example.
 
-### Example 1
+## Example 1
 
 **Input:**
 
