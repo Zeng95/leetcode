@@ -1,3 +1,4 @@
+-- Solution 1
 SELECT Country.name AS country
 FROM Person
 JOIN Calls
