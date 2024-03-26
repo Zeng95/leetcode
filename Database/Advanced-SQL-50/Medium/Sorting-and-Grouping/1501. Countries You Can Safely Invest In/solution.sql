@@ -9,4 +9,4 @@ GROUP BY 1
 HAVING AVG(duration) > (
     SELECT AVG(duration)
     FROM Calls
-)
+);

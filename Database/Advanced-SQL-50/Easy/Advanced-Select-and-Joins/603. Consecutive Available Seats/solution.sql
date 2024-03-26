@@ -9,7 +9,7 @@ WITH cte AS (
 )
 SELECT seat_id
 FROM cte
-WHERE (free != 0 AND free = free_prev) OR (free != 0 AND free = free_next)
+WHERE (free != 0 AND free = free_prev) OR (free != 0 AND free = free_next);
 
 -- Solution 2
 SELECT DISTINCT a.seat_id
