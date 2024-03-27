@@ -2,34 +2,20 @@
 
 Table: `Transactions`
 
-| Column Name    | Type    |
-| :------------- | :------ |
-| transaction_id | int     |
-| name           | varchar |
-| salary         | int     |
-| departmentId   | int     |
+| Column Name    | Type     |
+| :------------- | :------- |
+| transaction_id | int      |
+| day            | datetime |
+| amount         | int      |
 
 ```text
-id is the primary key (column with unique values) for this table.
-departmentId is a foreign key (reference columns) of the ID from the Department table.
-Each row of this table indicates the ID, name, and salary of an employee. It also contains the ID of their department.
+transaction_id is the column with unique values for this table.
+Each row contains information about one transaction.
 ```
 
-Table: `Department`
+Write a solution to report the IDs of the transactions with the **maximum** amount on their respective day. If in one day there are multiple such transactions, return all of them.
 
-| Column Name | Type    |
-| :---------- | :------ |
-| id          | int     |
-| name        | varchar |
-
-```text
-id is the primary key (column with unique values) for this table. It is guaranteed that department name is not NULL.
-Each row of this table indicates the ID of a department and its name.
-```
-
-Write a solution to find employees who have the highest salary in each of the departments.
-
-Return the result table in **any order**.
+Return the result table **ordered by** `transaction_id` **in ascending order**.
 
 The result format is in the following example.
 
@@ -37,33 +23,32 @@ The result format is in the following example.
 
 **Input:**
 
-Employee table:
+Transactions table:
 
-| id   | name  | salary | departmentId |
-| :--- | :---- | :----- | :----------- |
-| 1    | Joe   | 70000  | 1            |
-| 2    | Jim   | 90000  | 1            |
-| 3    | Henry | 80000  | 2            |
-| 4    | Sam   | 60000  | 2            |
-| 5    | Max   | 90000  | 1            |
-
-Department table:
-
-| id   | name  |
-| :--- | :---- |
-| 1    | IT    |
-| 2    | Sales |
+| transaction_id | day                | amount |
+| :------------- | :----------------- | :----- |
+| 8              | 2021-4-3 15:57:28  | 57     |
+| 9              | 2021-4-28 08:47:25 | 21     |
+| 1              | 2021-4-29 13:28:30 | 58     |
+| 5              | 2021-4-28 16:39:59 | 40     |
+| 6              | 2021-4-29 23:39:28 | 58     |
 
 **Output:**
 
-| Department | Employee | Salary |
-| :--------- | :------- | :----- |
-| IT         | Jim      | 90000  |
-| Sales      | Henry    | 80000  |
-| IT         | Max      | 90000  |
+| transaction_id |
+| :------------- |
+| 1              |
+| 5              |
+| 6              |
+| 8              |
 
 **Explanation:**
 
 ```text
-Max and Jim both have the highest salary in the IT department and Henry has the highest salary in the Sales department.
+"2021-4-3"  --> We have one transaction with ID 8, so we add 8 to the result table.
+"2021-4-28" --> We have two transactions with IDs 5 and 9. The transaction with ID 5 has an amount of 40, while the transaction with ID 9 has an amount of 21. We only include the transaction with ID 5 as it has the maximum amount this day.
+"2021-4-29" --> We have two transactions with IDs 1 and 6. Both transactions have the same amount of 58, so we include both in the result table.
+We order the result table by transaction_id after collecting these IDs.
 ```
+
+**Follow up:** Could you solve it without using the `MAX()` function?
