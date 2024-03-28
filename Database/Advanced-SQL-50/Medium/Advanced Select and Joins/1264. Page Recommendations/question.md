@@ -47,9 +47,9 @@ Sales table:
 
 **Explanation:**
 
-```text
+<pre>
 Day 2020-05-01, 10 apples and 8 oranges were sold (Difference  10 - 8 = 2).
 Day 2020-05-02, 15 apples and 15 oranges were sold (Difference 15 - 15 = 0).
 Day 2020-05-03, 20 apples and 0 oranges were sold (Difference 20 - 0 = 20).
 Day 2020-05-04, 15 apples and 16 oranges were sold (Difference 15 - 16 = -1).
-```
+</pre>

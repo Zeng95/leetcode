@@ -8,11 +8,11 @@ Table: `Calls`
 | to_id       | int  |
 | duration    | int  |
 
-<pre>
+```text
 This table does not have a primary key (column with unique values), it may contain duplicates.
 This table contains the duration of a phone call between from_id and to_id.
 from_id != to_id
-</pre>
+```
 
 Write a solution to report the number of calls and the total call duration between each pair of distinct persons `(person1, person2)` where `person1 < person2`.
 
@@ -20,7 +20,7 @@ Return the result table in **any order**.
 
 The result format is in the following example.
 
-### Example 1
+## Example 1
 
 **Input:**
 
@@ -46,8 +46,8 @@ Calls table:
 
 **Explanation:**
 
-<pre>
+```text
 Users 1 and 2 had 2 calls and the total duration is 70 (59 + 11).
 Users 1 and 3 had 1 call and the total duration is 20.
 Users 3 and 4 had 4 calls and the total duration is 999 (100 + 200 + 200 + 499).
-</pre>
+```
