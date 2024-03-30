@@ -1,21 +1,32 @@
-# 1445. Apples & Oranges
+# 1264. Page Recommendations
 
-Table: `Sales`
+Table: `Friendship`
 
 | Column Name | Type |
 | :---------- | :--- |
-| sale_date   | date |
-| fruit       | enum |
-| sold_num    | int  |
+| user1_id    | int  |
+| user2_id    | int  |
 
 ```text
-(sale_date, fruit) is the primary key (combination of columns with unique values) of this table.
-This table contains the sales of "apples" and "oranges" sold each day.
+(user1_id, user2_id) is the primary key (combination of columns with unique values) for this table.
+Each row of this table indicates that there is a friendship relation between user1_id and user2_id.
 ```
 
-Write a solution to report the difference between the number of **apples** and **oranges** sold each day.
+Table: `Likes`
 
-Return the result table **ordered** by `sale_date`.
+| Column Name | Type |
+| :---------- | :--- |
+| user1_id    | int  |
+| page_id     | int  |
+
+```text
+(user_id, page_id) is the primary key (combination of columns with unique values) for this table.
+Each row of this table indicates that user_id likes page_id.
+```
+
+Write a solution to recommend pages to the user with `user_id = 1` using the pages that your friends liked. It should not recommend pages you already liked.
+
+Return result table in **any order** without duplicates.
 
 The result format is in the following example.
 
@@ -23,33 +34,47 @@ The result format is in the following example.
 
 **Input:**
 
-Sales table:
+Friendship table:
 
-| sale_date  | fruit   | sold_num |
-| :--------- | :------ | :------- |
-| 2020-05-01 | apples  | 10       |
-| 2020-05-01 | oranges | 8        |
-| 2020-05-02 | apples  | 15       |
-| 2020-05-02 | oranges | 15       |
-| 2020-05-03 | apples  | 20       |
-| 2020-05-03 | oranges | 0        |
-| 2020-05-04 | apples  | 15       |
-| 2020-05-04 | oranges | 16       |
+| user1_id | user2_id |
+| :------- | :------- |
+| 1        | 2        |
+| 1        | 3        |
+| 1        | 4        |
+| 2        | 3        |
+| 2        | 4        |
+| 2        | 5        |
+| 6        | 1        |
+
+Likes table:
+
+| user_id | page_id |
+| :------ | :------ |
+| 1       | 88      |
+| 2       | 23      |
+| 3       | 24      |
+| 4       | 56      |
+| 5       | 11      |
+| 6       | 33      |
+| 2       | 77      |
+| 3       | 77      |
+| 6       | 88      |
 
 **Output:**
 
-| sale_date  | diff |
-| :--------- | :--- |
-| 2020-05-01 | 2    |
-| 2020-05-02 | 0    |
-| 2020-05-03 | 20   |
-| 2020-05-04 | -1   |
+| recommended_page |
+| :--------------- |
+| 23               |
+| 24               |
+| 56               |
+| 33               |
+| 77               |
 
 **Explanation:**
 
-<pre>
-Day 2020-05-01, 10 apples and 8 oranges were sold (Difference  10 - 8 = 2).
-Day 2020-05-02, 15 apples and 15 oranges were sold (Difference 15 - 15 = 0).
-Day 2020-05-03, 20 apples and 0 oranges were sold (Difference 20 - 0 = 20).
-Day 2020-05-04, 15 apples and 16 oranges were sold (Difference 15 - 16 = -1).
-</pre>
+```text
+User one is friend with users 2, 3, 4 and 6.
+Suggested pages are 23 from user 2, 24 from user 3, 56 from user 3 and 33 from user 6.
+Page 77 is suggested from both user 2 and user 3.
+Page 88 is not suggested because user 1 already likes it.
+```
