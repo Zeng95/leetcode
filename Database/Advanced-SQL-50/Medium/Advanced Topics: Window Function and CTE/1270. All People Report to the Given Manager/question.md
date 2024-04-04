@@ -1,4 +1,4 @@
-# 1709. Biggest Window Between Visits
+# 1270. All People Report to the Given Manager
 
 Table: `Employees`
 
