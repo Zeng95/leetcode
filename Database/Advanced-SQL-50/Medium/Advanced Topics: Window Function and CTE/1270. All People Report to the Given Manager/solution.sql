@@ -1,3 +1,4 @@
+-- Solution 1
 WITH RECURSIVE EmployeeHierarchy AS (
     SELECT
         employee_id,
