@@ -1,12 +1,12 @@
-## Approach: Using `outer join`
+# Approach: Using `outer join`
 
-#### Intuition
+## Intuition
 
 Since the _PersonId_ in table **Address** is the foreign key of table **Person**, we can join these two tables to get the address information of a person.
 
 Considering there might be no address information for every person, we should use `outer join` instead of the default `inner join`.
 
-#### Implementation
+## Implementation
 
 ```sql
 SELECT firstName, lastName, city, state
