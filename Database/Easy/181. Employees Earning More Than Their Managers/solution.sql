@@ -1,4 +1,4 @@
--- PostgreSQL - Solution 1 - Inner Join
+-- Solution 1
 SELECT e1.name AS Employee
 FROM employee e1
 JOIN employee e2
