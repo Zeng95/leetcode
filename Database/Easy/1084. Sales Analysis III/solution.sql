@@ -1,7 +1,7 @@
 -- Solution 1
-SELECT DISTINCT p.product_id, p.product_name
+SELECT p.product_id, p.product_name
 FROM Sales s
-LEFT JOIN Product p
+JOIN Product p
 ON s.product_id = p.product_id
 GROUP BY 1, 2
 HAVING MIN(s.sale_date) >= '2019-01-01' AND MAX(s.sale_date) <= '2019-03-31';
